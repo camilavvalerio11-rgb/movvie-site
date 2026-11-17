@@ -1,0 +1,80 @@
+CALCULADORAS DA MOTO · MOVVIE
+=============================
+
+O QUE TEM NESTA PASTA
+- index.html ............ o aplicativo
+- manifest.webmanifest .. nome, cores e ícones do app (é o que deixa instalar no celular)
+- sw.js ................. faz o app abrir mesmo sem internet
+- icons/ ................ ícones com a logo da Movvie
+
+Suba a pasta inteira, do jeito que está. Não renomeie os arquivos.
+O app só instala no celular se o site estiver em HTTPS (com o cadeado).
+
+
+JEITO 1 · A MOVVIE JÁ TEM SITE COM HOSPEDAGEM (Hostinger, Locaweb, HostGator etc.)
+-------------------------------------------------------------------------
+1. Entre no painel da hospedagem e abra o "Gerenciador de arquivos".
+2. Entre na pasta do site (normalmente "public_html").
+3. Crie uma pasta chamada "calculadoras".
+4. Dentro dela, envie todos os arquivos desta pasta, incluindo a pasta "icons".
+5. Pronto: o app fica em https://SEU-DOMINIO/calculadoras/
+
+Se o site da Movvie é feito em Wix ou Instagram-link, ele não aceita arquivos assim:
+use o Jeito 2.
+
+
+JEITO 2 · GITHUB PAGES (de graça) + SUBDOMÍNIO DA MOVVIE
+--------------------------------------------------------
+Parte A · Publicar
+1. Crie uma conta em github.com (ou use a que você já tem).
+2. Clique em "+" (canto de cima) > "New repository".
+   Nome: movvie-calculadoras · marque "Public" · clique em "Create repository".
+3. Clique em "uploading an existing file".
+4. Arraste TODOS os arquivos desta pasta, incluindo a pasta "icons".
+   Clique em "Commit changes".
+5. Vá em "Settings" > "Pages".
+   Em "Branch", escolha "main" e "/ (root)" e clique em "Save".
+6. Espere 1 a 2 minutos. O app fica em:
+   https://SEU-USUARIO.github.io/movvie-calculadoras/
+
+Parte B · Colocar no domínio da Movvie (ex.: app.movvie.com.br)
+1. Ainda em "Settings" > "Pages", em "Custom domain", digite contas.SEU-DOMINIO
+   e clique em "Save".
+2. No lugar onde o domínio foi registrado (Registro.br, Hostinger, GoDaddy etc.),
+   abra a "Zona DNS" e crie um registro:
+     Tipo: CNAME
+     Nome: contas
+     Valor/Destino: SEU-USUARIO.github.io
+3. Espere a propagação (de alguns minutos até algumas horas).
+4. Volte em "Settings" > "Pages" e marque "Enforce HTTPS" quando aparecer.
+5. Pronto: o app fica em https://contas.SEU-DOMINIO
+
+
+COMO ATUALIZAR O APP DEPOIS
+1. Suba o arquivo novo por cima do antigo.
+2. Abra o sw.js e troque 'movvie-calculadoras-v1' por 'movvie-calculadoras-v2'
+   (v3 na próxima, e assim por diante). Isso faz o celular dos alunos pegar a versão nova.
+
+
+ONDE FICAM OS DADOS DOS ALUNOS
+A precificação e os check-ins ficam salvos no próprio celular de cada aluno,
+dentro do app. Ninguém mais vê, nem a Movvie. Se o aluno desinstalar o app ou
+limpar os dados do navegador, perde o histórico.
+
+
+TEXTO PRONTO PARA A AULA (copie e cole)
+---------------------------------------
+Instale o app das calculadoras no seu celular:
+
+No Android (Chrome):
+1. Abra o link [COLE O LINK DO APP AQUI] no Chrome.
+2. Toque em "Instalar app" quando aparecer, ou nos 3 pontinhos > "Adicionar à tela inicial".
+3. Pronto: o ícone da Movvie aparece junto com os seus apps.
+
+No iPhone (Safari):
+1. Abra o link [COLE O LINK DO APP AQUI] no Safari (tem que ser o Safari).
+2. Toque no botão de compartilhar (o quadrado com a seta para cima).
+3. Role e toque em "Adicionar à Tela de Início" > "Adicionar".
+
+Importante: depois de instalar, use sempre pelo ícone na tela inicial.
+Seus dados ficam salvos no seu celular.
